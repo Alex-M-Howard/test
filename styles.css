@@ -1,0 +1,129 @@
+#stripe{
+    background-color: #1c79e2;
+    color: #FFF;
+}
+
+
+.table td, .thead th{
+    border: 1px solid rgb(19, 23, 19);
+    border-width: 1px 1px 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+
+} 
+
+.active{
+    font-weight: 600;
+}
+
+.hidden{
+    display: none;
+}
+
+.box{
+    box-shadow: 1px 1px #000;
+}
+
+.navbar{
+    background-color: #002856;
+}
+
+.nav-link {
+    
+    color: #FFF;
+}
+
+.navbar-nav .nav-link.active{
+    color: #FFF;
+}
+
+#bluestar-logo {
+    height: 60px;
+    bottom: 0px;
+    position: absolute;
+    width: auto;
+}
+
+
+
+#dropdown{
+    color: #FFF;
+}
+
+#nav-drop{
+    color: #000;
+}
+
+
+.dropdown-menu li {
+position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+.dropdown-item:hover{
+    background-color: #1c79e2;
+    font-size: large;
+    font-weight: 450;
+    
+}
+
+#dropdown:hover{
+    color: #000
+}
+#ECO-excel{
+    background-color: #002856;
+    color: white;
+    font-family: "Trade-Gothic", "Open Sans", Helvetica, Arial, sans-serif;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 7px auto 0 auto;
+    padding: 15px 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+
+
+#submit-request{
+    background-color: #002856;
+    color: white;
+    width: 20%;
+}
+
+#eco-sheet{
+    background-color: #002856;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

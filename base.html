@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amada Data Explorer</title>
+    <script src="https://kit.fontawesome.com/22a73e52cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/icon.ico">
+    
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  
+ 
+    <img src="logo.jpg" alt="Bootstrap" id="bluestar-logo">
+  
+
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+          <li class="nav-item mx-3"><a class="nav-link" href="/" id="Home-nav">Home</a></li>
+
+          
+          <div class="navbar-item dropdown">
+            <button class="btn dropdown-toggle" id="dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: #002856;">
+              SOPs
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#" id="nav-drop">Amada</a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/blankcam" id="nav-drop">Blank CAM SOP</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/data-explorer" id="nav-drop">Data Explorer Guide</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/material-explorer" id="nav-drop">Material Explorer Guide</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/parameter-explorer" id="nav-drop">Parameter Explorer Guide</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="nav-drop">Trumpf</a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/tru-tops" id="nav-drop">Tru-Tops SOP</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/tru-tops-offline" id="nav-drop">Offline Program Loading SOP</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="nav-drop">Punch</a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/punch-sop" id="nav-drop">Punch SOP</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="http://mmisupport.com/HelpSys/smphelp/index.htm" id="nav-drop">SMP Master Index</a></li>
+                </ul>
+              </li>
+            
+              <li>
+                <a class="dropdown-item" href="#" id="nav-drop">Forming</a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/amada-bend-op" id="nav-drop">Amada Bend Operation</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/amada-bend-params" id="nav-drop">Amada Bend Parameters</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/amada-bend-user" id="nav-drop">Amada Bend User Guide</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/data-explorer" id="nav-drop">Data Explorer Guide</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/material-explorer" id="nav-drop">Material Explorer Guide</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/parameter-explorer" id="nav-drop">Parameter Explorer Guide</a></li>
+                  <li class="nav-item mx-3"><a class="dropdown-item" href="/salvagnini" id="nav-drop">Salvagnini Users Guide</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="navbar-item dropdown">
+            <button class="btn dropdown-toggle" id="dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: #002856;">
+              Data Explorers
+            </button>
+            <ul class="dropdown-menu">
+              <li class="nav-item mx-3"><a class="dropdown-item" href="/amada" id="nav-drop">Amada</a></li>
+              <li class="nav-item mx-3"><a class="dropdown-item" href="/trumpf" id="nav-drop">Trumpf</a></li>
+              <li class="nav-item mx-3"><a class="dropdown-item" href="/punch" id="nav-drop">Punch</a></li>
+            </ul>
+          </div>
+
+          <li class="nav-item mx-3"><a class="nav-link" href="/eco" id="eco-nav">ECO Viewer</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="/nest_calculator" id="nestCalc-nav">Nesting Calculator</a></li>
+          
+          <li class="nav-item mx-3"><a class="nav-link" href="/todo" id="Todo-nav">TODO List and User Requests</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+        
+
+
+  
+  
+
+
+  <table class="table my-4 hidden">
+    <thead class="thead"> 
+      <tr>
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="nest">
+            <span>Nest <br>
+              <a href="#" id="nest-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="nest-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="gage">
+            <span>Gage  <br>
+              <a href="#" id="gage-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="gage-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+
+       
+      <th scope="col" class="text-center">Nested With</th>
+
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="material">
+            <span>Material <br>
+              <a href="#" id="material-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="material-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="size_x">
+            <span>Size_x <br>
+              <a href="#" id="size_x-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="size_x-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="size_y">
+            <span>Size_y <br>
+              <a href="#" id="size_y-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="size_y-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="scrap">
+            <span>Scrap <br>
+              <a href="#" id="scrap-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="scrap-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="rough_scrap">
+            <span>Rough_scrap <br>
+             <a href="#" id="rough_scrap-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="rough_scrap-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+
+      <th scope="col" class="text-center">
+          <h5 class="text-center" id="date">
+            <span>Date  <br>
+             <a href="#" id="date-sort"><i class="fa-solid fa-arrow-down"></i></a>&nbsp;&nbsp;<a href="#" id="date-rev-sort"><i class="fa-solid fa-arrow-up"></i></a>
+            </span>
+          </h5>   
+      </th>
+    </tr>
+    <tr>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="nest-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="gage-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="nested_with-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="material-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="size_x-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="size_y-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="scrap-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="rough_scrap-filter"></td>
+      <td style="box-shadow:1px 1px #1c79e2"><input type="text" class="box form-control filter" id="date-filter"></td>
+    </tr>
+      
+    </thead>
+    <tbody id="results"></tbody>
+  </table>
+  
+
+
+  <h1 class="text-center my-4" id="loading">Loading...</h1>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="bootstrap.bundle.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="amada.js"></script>
+    
+    
+</body>
+</html>
